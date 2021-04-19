@@ -1,0 +1,67 @@
+<div class="c-container">
+	<nav class="header__inner">
+		<a class="header__logo" href="index.html">
+			<img src="img/system/logos/DI-logo.png" alt="logo">
+		</a>
+
+		<ul class="nav-menu">
+			<li class="nav-menu__item">
+				<a class="nav-menu__link" href="in-dev.html">Про компанію</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link" href="in-dev.html">Новини</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<p class="nav-menu__link hide-on-mob">Послуги компанії</p>
+
+				<ul class="drop-down">
+					<li class="drop-down__item">
+						<a class="drop-down__link" href="commercial-delivery.html">Комерційні перевезення</a>
+					</li>
+
+					<li class="drop-down__item">
+						<a class="drop-down__link" href="service-warehouse.html">Складські послуги</a>
+					</li>
+
+					<li class="drop-down__item">
+						<a class="drop-down__link" href="export-mail.html">Експортна пошта</a>
+					</li>
+
+					<li class="drop-down__item">
+						<a class="drop-down__link" href="import-mail.html">Імпортна пошта</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link" href="contacts.html">Контакти</a>
+			</li>
+		</ul>
+		
+		<div class="nav-menu__group">
+			<div class="nav-hot-line">
+				<a href="tel:+380675366070" class="nav-hot-line__number">
+					<img src="img/system/icon/phone-call-icon.svg" alt="icon">
+					<p>+38(067)536-60-70</p>
+				</a>
+				<p class="nav-hot-line__schedule">ПН-ПТ 08:00-18:00</p>
+				<p class="nav-hot-line__schedule">СБ 09:00-15:00</p>
+			</div>
+	
+			<div class="mob-menu-btn"></div>
+		</div>
+	</nav>
+
+	<script>
+		// При открытии меню ЛК -- закрывать Моб.меню
+		$(".mob-menu-btn").on('click', function(e){
+			$(".mob-menu-btn").toggleClass("mob-menu-btn--opened");
+			$(".nav-menu").toggleClass("nav-menu--active");
+			$("#body").toggleClass("no-scroll");
+		})
+	</script>
+</div>
+
+
