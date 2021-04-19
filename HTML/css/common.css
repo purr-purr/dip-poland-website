@@ -320,7 +320,7 @@ details > summary {
 .drop-down {
 	display: none;
 	position: absolute;
-	top: 80px;
+	top: 79px;
 	left: -32px;
 	z-index: 3;
 	width: 223px;
