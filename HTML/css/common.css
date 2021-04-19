@@ -406,7 +406,6 @@ details > summary {
 .mob-menu-btn--opened {
 	background: url('../img/system/icon/humburger-close.svg') no-repeat center center;
 	background-size: 29px 18px;
-	margin-right: 6px;
 }
 
 .no-scroll {
