@@ -867,6 +867,9 @@ details > summary {
 	background: url('../img/system/page-header/page-header__import-mail.jpg') no-repeat center center;
 }
 
+.page-header--about-company {
+	background: url('../img/system/page-header/page-header__about-company.jpg') no-repeat center center;
+}
 
 .page-header__inner {
 	display: flex;
@@ -946,6 +949,9 @@ details > summary {
 	}
 	.page-header--import-mail {
 		background: url('../img/system/page-header/page-header__import-mail--mobile.jpg') no-repeat center center;
+	}
+	.page-header--about-company {
+		background: url('../img/system/page-header/page-header__about-company--mobile.jpg') no-repeat center center;
 	}
 }
 
@@ -1471,6 +1477,249 @@ details > summary {
 	.socials__ul {
 		justify-content: space-around;
 		align-items: center;
+		width: 100%;
+	}
+}
+
+/* ======================================
+//             Про компанию
+====================================== */
+
+.about-company {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 37px 0 40px;
+}
+
+.about-company__info {
+	margin-right: 32px;
+}
+
+.about-company__map {
+	max-width: 550px;
+	width: 100%;
+	height: auto;
+}
+
+.all-group {
+	padding: 45px 0 100px;
+}
+
+.all-group__ul {
+	margin-top: 40px;
+}
+
+.all-group__item {
+	display: flex;
+	align-items: center;
+	height: 92px;
+	margin-bottom: 40px;
+}
+
+.all-group__logo {
+	min-width: 283px;
+	margin-right: 27px;
+}
+
+.all-group__logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.all-group__info-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 510px;
+	height: 100%;
+}
+
+.all-group__title h3 {
+	font-size: 22px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.all-group__title p {
+	line-height: 20px;
+}
+
+.all-group__link {
+	color: #3072C4;
+	font-size: 18px;
+	line-height: 20px;
+	text-decoration: underline;
+}
+
+/* Блок Послуги компанії */
+.services-block {
+	display: flex;
+	justify-content: space-between;
+	padding: 100px 0 80px;
+}
+
+.services-block__info {
+	min-width: 345px;
+	width: 345px;
+	margin-right: 30px;
+}
+
+.services-block__ul {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.services-block__item {
+	width: 187px;
+	height: 187px;
+	margin: 0 0 20px 20px;
+	background-color: #2F6088;
+}
+
+.services-block__link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 34px 20px 20px;
+}
+
+.services-block__icon {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+.services-block__icon img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.services-block__text {
+	color: #FFF;
+	max-width: 118px;
+	margin-bottom: 10px;
+}
+
+.services-block__open-icon {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 30px;
+	height: 8px;
+}
+
+.services-block__open-icon img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.services-block__item:hover {
+	background: linear-gradient(313.38deg, #FF9900 -2.55%, #FFC700 106.49%);
+}
+
+.services-block__item:hover .services-block__text {
+	color: #333;
+}
+
+.services-block__item:hover .white-icon,
+.services-block__item .black-icon {
+	display: none;
+}
+
+.services-block__item:hover .black-icon {
+	display: block;
+}
+
+@media (max-width: 1024px) {
+	.about-company {
+		flex-direction: column;
+		padding: 20px 0 50px;
+	}
+	.about-company__info {
+		margin-right: 0;
+	}
+	.about-company__map {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.about-company__map img {
+		height: auto;
+		width: 100%;
+		display: block;
+	}
+	.all-group {
+		padding: 0 0 50px;
+	}
+	.all-group__ul {
+		margin-top: 20px;
+	}
+	.all-group__item {
+		margin-bottom: 20px;
+	}
+	.all-group__logo {
+		min-width: 280px;
+	}
+	.all-group__title h3 {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 22px;
+		margin-bottom: 15px;
+	}
+	.all-group__link {
+		font-size: 15px;
+	}
+	/* Блок Послуги компанії */
+	.services-block {
+		flex-direction: column;
+		align-items: baseline;
+		padding: 50px 0 35px;
+	}
+	.services-block__info {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.services-block__ul {
+		justify-content: flex-start;
+	}
+	.services-block__item {
+		margin: 0 15px 15px 0;
+	}
+	.services-block__text {
+		max-width: 135px;
+		font-size: 15px;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 800px) {
+	.all-group {
+		padding: 0 0 30px;
+	}
+	.all-group__item {
+		flex-direction: column;
+		align-items: baseline;
+		height: auto;
+	}
+	.all-group__logo {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.all-group__link {
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 450px) {
+	.services-block__info {
+		min-width: auto;
 		width: 100%;
 	}
 }
