@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
     $('.main-slider').slick({
         // autoplay: true,
