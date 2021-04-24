@@ -37,46 +37,417 @@
                 </div>
 
                 <section>
-                    <div class="c-container">
+                    <div class="c-container c-container--news">
                         <div class="news__inner">
                             <h2 class="section-title">Новини про компанію Delivery International Poland</h2>
 
                             <form class="news-search">
-                                <select name="" id=""></select>
-                                <input type="text">
+                                <select class="news-search__select" name="" id="">
+                                    <option value="-1" style="display: none;">Період часу</option>
+                                    <option value="1">Січень</option>
+                                    <option value="2">Лютий</option>
+                                    <option value="3">Березень</option>
+                                    <option value="4">Квітень</option>
+                                    <option value="5">Травень</option>
+                                    <option value="6">Червень</option>
+                                    <option value="7">Липень</option>
+                                    <option value="8">Серпень</option>
+                                    <option value="9">Вересень</option>
+                                    <option value="10">Жовтень</option>
+                                    <option value="11">Листопад</option>
+                                    <option value="12">Грудень</option>
+                                </select>
+                                <input class="news-search__input" type="text" placeholder="Ключове слово">
                             </form>
 
                             <ul class="news">
-                                <li class="news__item">
-                                    <details>
+                                <!-- next news item -->
+                                <li>
+                                    <details class="news__details">
                                         <summary>
-                                            <div>
-                                                <div>
-                                                    <time>20.04.2021</time>
-                                                    <h4>Починаємо доставляти посилки у США</h4>
+                                            <!-- Если в новости нету баннера - то рядом с class="news-heading" нужно добавить id="hide-if-no-banner" -->
+                                            <div class="news-heading" id="hide-if-no-banner">
+                                                <div class="news-heading__short-info">
+                                                    <time class="short-info__time">20.04.2021</time>
+                                                    <h4 class="short-info__title">Починаємо доставляти посилки у США</h4>
+                                                    <div onclick="print_doc()" class="print-btn">
+                                                        <img src="img/system/icon/print-icon.svg" alt="icon">
+                                                        <p>Друкувати новину</p>
+                                                    </div>
+
+                                                    <div class="hide-news-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Сховати новину</p>
+                                                    </div>
                                                 </div>
+                                                
+                                                <div class="news-heading__short-news">
+                                                    <p class="short-news__desc">Компанія «Delivery Group» завжди активно працює в напрямку оптимізації логістичних ланцюгів, особливо, коли мова йде про міжнародні перевезення.
+                                                        Сьогодні ми з радістю хочемо повідомити, що ми починаємо доставляти посилки у США, включаючи Аляску
+                                                    </p>
 
-                                                <div>
-                                                    <p>Компанія «Delivery Group» завжди активно працює в напрямку оптимізації логістичних ланцюгів, особливо, коли мова йде про міжнародні перевезення.
-                                                        Сьогодні ми з радістю хочемо повідомити, що ми починаємо доставляти посилки у США, включаючи Аляску...</p>
+                                                    <div class="news-banner">
+                                                        <img src="img/content/news-block/news-page__banner1.jpg" alt="banner">
+                                                    </div>
 
-                                                    <div>
-                                                        <img src="" alt="icon">
-
+                                                    <div class="know-more-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
                                                         <p>Дізнатися більше</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </summary>
 
-                                        <div>
-                                            
+                                        <div class="opened-news">
+                                            <p>  <strong>«DELIVERY GROUP»</strong> - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.</p>
+
+                                            <p> Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного клієнта, здатна знайти найкращі по ціні та якості логістичні рішення.</p>
+
+                                            <p> Завдяки багаторічному досвіду, партнерськими відношеннями з багатьма логістичними компаніями світу, ми можемо запропонувати доступну вартість, якісний сервіс та гарантувати безпеку Вашого вантажу.</p>
+
+                                            <p> Для наших клієнтів у 2021 році ми розпочинаємо акцію  –  ЄВРОПА БЛИЖЧЕ.</p>
+
+                                            <p> У рамках акції щомісячно обирається одна країна Європи, співпраця з якою дає можливість скористатись додатковою знижкою до діючого тарифу клієнта при імпорті чи експорті вантажу</p>
+
+                                            <p> Розпочинаємо акцію з найближчої країни-сусіда – республіки Польща.</p>
+
+                                            <p> Довірте транспортування вантажу професіоналам,</p>
+
+                                            <p> І це збереже Ваші кошти, сили та час!</p>
+
+                                            <p> Замовити послугу,  розрахувати вартість чи отримати консультацію можна на нашому сайті – Delivery International заповнивши заявку на перевезення або зв’язавшись з інформаційною підтримкою:</p>
+
+                                            <p>
+                                                <a href="+380675578874">+38 (067) 557-88-74 </a>
+                                            </p>
+
+                                        </div>
+                                    </details>
+                                </li>
+
+                                <!-- next news item -->
+                                <li>
+                                    <details class="news__details">
+                                        <summary>
+                                            <!-- Если в новости нету баннера - то рядом с class="news-heading" нужно добавить id="hide-if-no-banner" -->
+                                            <div class="news-heading">
+                                                <div class="news-heading__short-info">
+                                                    <time class="short-info__time">20.04.2021</time>
+                                                    <h4 class="short-info__title">Акція «Європа ближче»</h4>
+                                                    <div onclick="print_doc()" class="print-btn">
+                                                        <img src="img/system/icon/print-icon.svg" alt="icon">
+                                                        <p>Друкувати новину</p>
+                                                    </div>
+
+                                                    <div class="hide-news-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Сховати новину</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="news-heading__short-news">
+                                                    <p class="short-news__desc">«DELIVERY GROUP» - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.
+                                                        Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного 
+                                                    </p>
+
+                                                    <div class="news-banner">
+                                                        <img src="img/content/news-block/news-page__banner1.jpg" alt="banner">
+                                                    </div>
+
+                                                    <div class="know-more-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Дізнатися більше</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </summary>
+
+                                        <div class="opened-news">
+                                            <p>  <strong>«DELIVERY GROUP»</strong> - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.</p>
+
+                                            <p> Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного клієнта, здатна знайти найкращі по ціні та якості логістичні рішення.</p>
+
+                                            <p> Завдяки багаторічному досвіду, партнерськими відношеннями з багатьма логістичними компаніями світу, ми можемо запропонувати доступну вартість, якісний сервіс та гарантувати безпеку Вашого вантажу.</p>
+
+                                            <p> Для наших клієнтів у 2021 році ми розпочинаємо акцію  –  ЄВРОПА БЛИЖЧЕ.</p>
+
+                                            <p> У рамках акції щомісячно обирається одна країна Європи, співпраця з якою дає можливість скористатись додатковою знижкою до діючого тарифу клієнта при імпорті чи експорті вантажу</p>
+
+                                            <p> Розпочинаємо акцію з найближчої країни-сусіда – республіки Польща.</p>
+
+                                            <p> Довірте транспортування вантажу професіоналам,</p>
+
+                                            <p> І це збереже Ваші кошти, сили та час!</p>
+
+                                            <p> Замовити послугу,  розрахувати вартість чи отримати консультацію можна на нашому сайті – Delivery International заповнивши заявку на перевезення або зв’язавшись з інформаційною підтримкою:</p>
+
+                                            <p>
+                                                <a href="+380675578874">+38 (067) 557-88-74 </a>
+                                            </p>
+
+                                        </div>
+                                    </details>
+                                </li>
+
+                                <!-- next news item -->
+                                <li>
+                                    <details class="news__details">
+                                        <summary>
+                                            <!-- Если в новости нету баннера - то рядом с class="news-heading" нужно добавить id="hide-if-no-banner" -->
+                                            <div class="news-heading" id="hide-if-no-banner">
+                                                <div class="news-heading__short-info">
+                                                    <time class="short-info__time">21.04.2021</time>
+                                                    <h4 class="short-info__title">Використайте можливість відправити вантаж до Польщі за 255 грн або до Німеччини за 374 грн</h4>
+                                                    <div onclick="print_doc()" class="print-btn">
+                                                        <img src="img/system/icon/print-icon.svg" alt="icon">
+                                                        <p>Друкувати новину</p>
+                                                    </div>
+
+                                                    <div class="hide-news-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Сховати новину</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="news-heading__short-news">
+                                                    <p class="short-news__desc">К«Delivery Group» завжди активно шукає можливості для оптимізації та удосконалення існуючих логістичних рішень та розвитку нових. Під особливою увагою знаходяться логістичні рішення у міжнародних перевезеннях
+                                                    </p>
+
+                                                    <div class="news-banner">
+                                                        <img src="img/content/news-block/news-page__banner1.jpg" alt="banner">
+                                                    </div>
+
+                                                    <div class="know-more-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Дізнатися більше</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </summary>
+
+                                        <div class="opened-news">
+                                            <p>  <strong>«DELIVERY GROUP»</strong> - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.</p>
+
+                                            <p> Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного клієнта, здатна знайти найкращі по ціні та якості логістичні рішення.</p>
+
+                                            <p> Завдяки багаторічному досвіду, партнерськими відношеннями з багатьма логістичними компаніями світу, ми можемо запропонувати доступну вартість, якісний сервіс та гарантувати безпеку Вашого вантажу.</p>
+
+                                            <p> Для наших клієнтів у 2021 році ми розпочинаємо акцію  –  ЄВРОПА БЛИЖЧЕ.</p>
+
+                                            <p> У рамках акції щомісячно обирається одна країна Європи, співпраця з якою дає можливість скористатись додатковою знижкою до діючого тарифу клієнта при імпорті чи експорті вантажу</p>
+
+                                            <p> Розпочинаємо акцію з найближчої країни-сусіда – республіки Польща.</p>
+
+                                            <p> Довірте транспортування вантажу професіоналам,</p>
+
+                                            <p> І це збереже Ваші кошти, сили та час!</p>
+
+                                            <p> Замовити послугу,  розрахувати вартість чи отримати консультацію можна на нашому сайті – Delivery International заповнивши заявку на перевезення або зв’язавшись з інформаційною підтримкою:</p>
+
+                                            <p>
+                                                <a href="+380675578874">+38 (067) 557-88-74 </a>
+                                            </p>
+
+                                        </div>
+                                    </details>
+                                </li>
+
+                                <!-- next news item -->
+                                <li>
+                                    <details class="news__details">
+                                        <summary>
+                                            <!-- Если в новости нету баннера - то рядом с class="news-heading" нужно добавить id="hide-if-no-banner" -->
+                                            <div class="news-heading">
+                                                <div class="news-heading__short-info">
+                                                    <time class="short-info__time">22.04.2021</time>
+                                                    <h4 class="short-info__title"> Delivery group активно працює у напрямку розвитку міжнародних перевезень</h4>
+                                                    <div onclick="print_doc()" class="print-btn">
+                                                        <img src="img/system/icon/print-icon.svg" alt="icon">
+                                                        <p>Друкувати новину</p>
+                                                    </div>
+
+                                                    <div class="hide-news-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Сховати новину</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="news-heading__short-news">
+                                                    <p class="short-news__desc">Представляємо вашій увазі зміни у рамках послуги - "Екcпортна пошта" Відтепер ви можете відправити посилки до Молдови та Білорусі​.
+                                                        Збільшено перелік країн Європи для доставки, більш детальніше тут.
+                                                        Знижено тарифи на доставку до Польщі (для прикладу: новий тариф
+                                                    </p>
+
+                                                    <div class="news-banner">
+                                                        <img src="img/content/news-block/news-page__banner1.jpg" alt="banner">
+                                                    </div>
+
+                                                    <div class="know-more-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Дізнатися більше</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </summary>
+
+                                        <div class="opened-news">
+                                            <p>  <strong>«DELIVERY GROUP»</strong> - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.</p>
+
+                                            <p> Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного клієнта, здатна знайти найкращі по ціні та якості логістичні рішення.</p>
+
+                                            <p> Завдяки багаторічному досвіду, партнерськими відношеннями з багатьма логістичними компаніями світу, ми можемо запропонувати доступну вартість, якісний сервіс та гарантувати безпеку Вашого вантажу.</p>
+
+                                            <p> Для наших клієнтів у 2021 році ми розпочинаємо акцію  –  ЄВРОПА БЛИЖЧЕ.</p>
+
+                                            <p> У рамках акції щомісячно обирається одна країна Європи, співпраця з якою дає можливість скористатись додатковою знижкою до діючого тарифу клієнта при імпорті чи експорті вантажу</p>
+
+                                            <p> Розпочинаємо акцію з найближчої країни-сусіда – республіки Польща.</p>
+
+                                            <p> Довірте транспортування вантажу професіоналам,</p>
+
+                                            <p> І це збереже Ваші кошти, сили та час!</p>
+
+                                            <p> Замовити послугу,  розрахувати вартість чи отримати консультацію можна на нашому сайті – Delivery International заповнивши заявку на перевезення або зв’язавшись з інформаційною підтримкою:</p>
+
+                                            <p>
+                                                <a href="+380675578874">+38 (067) 557-88-74 </a>
+                                            </p>
+
+                                        </div>
+                                    </details>
+                                </li>
+
+                                <!-- next news item -->
+                                <li>
+                                    <details class="news__details">
+                                        <summary>
+                                            <!-- Если в новости нету баннера - то рядом с class="news-heading" нужно добавить id="hide-if-no-banner" -->
+                                            <div class="news-heading" id="hide-if-no-banner">
+                                                <div class="news-heading__short-info">
+                                                    <time class="short-info__time">23.04.2021</time>
+                                                    <h4 class="short-info__title">Нова послуга «Експортна пошта»</h4>
+                                                    <div onclick="print_doc()" class="print-btn">
+                                                        <img src="img/system/icon/print-icon.svg" alt="icon">
+                                                        <p>Друкувати новину</p>
+                                                    </div>
+
+                                                    <div class="hide-news-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Сховати новину</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="news-heading__short-news">
+                                                    <p class="short-news__desc">Шановні клієнти, в рамках розширення спектру послуг у напрямку міжнародних перевезень - Delivery GROUP повідомляє про старт послуги «Експортна пошта» *, за допомогою якої, ви можете відправляти посилки, вагою до 30 кг, в будь яку країну Європи
+                                                    </p>
+
+                                                    <div class="news-banner">
+                                                        <img src="img/content/news-block/news-page__banner1.jpg" alt="banner">
+                                                    </div>
+
+                                                    <div class="know-more-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Дізнатися більше</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </summary>
+
+                                        <div class="opened-news">
+                                            <p>  <strong>«DELIVERY GROUP»</strong> - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.</p>
+
+                                            <p> Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного клієнта, здатна знайти найкращі по ціні та якості логістичні рішення.</p>
+
+                                            <p> Завдяки багаторічному досвіду, партнерськими відношеннями з багатьма логістичними компаніями світу, ми можемо запропонувати доступну вартість, якісний сервіс та гарантувати безпеку Вашого вантажу.</p>
+
+                                            <p> Для наших клієнтів у 2021 році ми розпочинаємо акцію  –  ЄВРОПА БЛИЖЧЕ.</p>
+
+                                            <p> У рамках акції щомісячно обирається одна країна Європи, співпраця з якою дає можливість скористатись додатковою знижкою до діючого тарифу клієнта при імпорті чи експорті вантажу</p>
+
+                                            <p> Розпочинаємо акцію з найближчої країни-сусіда – республіки Польща.</p>
+
+                                            <p> Довірте транспортування вантажу професіоналам,</p>
+
+                                            <p> І це збереже Ваші кошти, сили та час!</p>
+
+                                            <p> Замовити послугу,  розрахувати вартість чи отримати консультацію можна на нашому сайті – Delivery International заповнивши заявку на перевезення або зв’язавшись з інформаційною підтримкою:</p>
+
+                                            <p>
+                                                <a href="+380675578874">+38 (067) 557-88-74 </a>
+                                            </p>
+
+                                        </div>
+                                    </details>
+                                </li>
+
+                                <!-- next news item -->
+                                <li>
+                                    <details class="news__details">
+                                        <summary>
+                                            <!-- Если в новости нету баннера - то рядом с class="news-heading" нужно добавить id="hide-if-no-banner" -->
+                                            <div class="news-heading">
+                                                <div class="news-heading__short-info">
+                                                    <time class="short-info__time">23.04.2021</time>
+                                                    <h4 class="short-info__title">Кабмін відкрив для вантажних перевезень ще два пункти пропуску</h4>
+                                                    <div onclick="print_doc()" class="print-btn">
+                                                        <img src="img/system/icon/print-icon.svg" alt="icon">
+                                                        <p>Друкувати новину</p>
+                                                    </div>
+
+                                                    <div class="hide-news-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Сховати новину</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="news-heading__short-news">
+                                                    <p class="short-news__desc">Кабмін дозволив здійснювати вантажні перевезення через автомобільний пункт пропуску «Рава-Руська» та Скадовський морський торговельний порт.
+                                                        Відповідне розпорядження Кабінет міністрів України ухвалив на своєму засіданні 6 травня
+                                                    </p>
+
+                                                    <div class="news-banner">
+                                                        <img src="img/content/news-block/news-page__banner1.jpg" alt="banner">
+                                                    </div>
+
+                                                    <div class="know-more-btn">
+                                                        <img src="img/system/icon/arrow-black.svg" alt="icon-arrow">
+                                                        <p>Дізнатися більше</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </summary>
+
+                                        <div class="opened-news">
+                                            <p>  <strong>«DELIVERY GROUP»</strong> - міжнародна транспортна компанія, сучасний оператор вантажних мультимодальних перевезень.</p>
+
+                                            <p> Компанія «DELIVERY GROUP» - це мобільна та відповідальна команда професіоналів, що забезпечує індивідуальний підхід до кожного клієнта, здатна знайти найкращі по ціні та якості логістичні рішення.</p>
+
+                                            <p> Завдяки багаторічному досвіду, партнерськими відношеннями з багатьма логістичними компаніями світу, ми можемо запропонувати доступну вартість, якісний сервіс та гарантувати безпеку Вашого вантажу.</p>
+
+                                            <p> Для наших клієнтів у 2021 році ми розпочинаємо акцію  –  ЄВРОПА БЛИЖЧЕ.</p>
+
+                                            <p> У рамках акції щомісячно обирається одна країна Європи, співпраця з якою дає можливість скористатись додатковою знижкою до діючого тарифу клієнта при імпорті чи експорті вантажу</p>
+
+                                            <p> Розпочинаємо акцію з найближчої країни-сусіда – республіки Польща.</p>
+
+                                            <p> Довірте транспортування вантажу професіоналам,</p>
+
+                                            <p> І це збереже Ваші кошти, сили та час!</p>
+
+                                            <p> Замовити послугу,  розрахувати вартість чи отримати консультацію можна на нашому сайті – Delivery International заповнивши заявку на перевезення або зв’язавшись з інформаційною підтримкою:</p>
+
+                                            <p>
+                                                <a href="+380675578874">+38 (067) 557-88-74 </a>
+                                            </p>
+
                                         </div>
                                     </details>
                                 </li>
                             </ul>
 
-                            <div class="news-pagination"></div>
+                            <div class="news-pagination">
+                                <!-- Пагинацию сюда можно -->
+                            </div>
                         </div>
                     </div>
                 </section>
