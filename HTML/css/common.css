@@ -299,7 +299,7 @@ details > summary {
 		font-size: 15px;
 	}
 	select {
-		padding: 0 37px 0 10px;
+		padding: 0 25px 0 0;
 		font-size: 15px;
 	}
 	textarea {
@@ -2618,7 +2618,7 @@ details > summary {
 		line-height: 20px;
 	}
 	.news-search__input {
-		padding-right: 20px;
+		padding-right: 25px;
 	}
 	.news-search__input::placeholder {
 		font-size: 15px;
