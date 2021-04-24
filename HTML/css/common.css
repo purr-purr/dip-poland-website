@@ -20,7 +20,6 @@ html {
 body {
 	width: 100%;
 	height: 100%;
-	/* overflow-y: scroll; */
 	display: flex;
 	flex-direction: column;
 
@@ -2288,6 +2287,7 @@ details > summary {
 		height: 227px;
 		background: url('../img/system/logos/DIP-circle.svg') no-repeat center center;
 		background-size: 227px;
+		animation: none;
 	}
 	.main-slider__info,
 	.main-slider__link::before  {
@@ -2857,4 +2857,3 @@ details > summary {
 		height: 92px;
 	}
 }
-
