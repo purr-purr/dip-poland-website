@@ -503,7 +503,86 @@ details > summary {
 	overflow: hidden;
 }
 
+.login-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 15px;
+	min-width: 124px;
+	height: 40px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.1;
+	color: #000;
+	background-color: #FF9900;
+	box-shadow: 0 5px 13px rgba(255, 153, 0, 0.48);
+	transition: all .3s ease-in-out;
+}
+
+.login-button:hover {
+	box-shadow: 0 10px 20px rgba(255, 153, 0, 0.8);
+	color: inherit;
+	transition: all .3s ease-in-out;
+}
+
+.logged-panel {
+	display: flex;
+	align-items: center;
+}
+
+.logged-panel__user-info {
+	display: flex;
+	align-items: center;
+	border-right: 1px solid #5D91BB;
+	cursor: pointer;
+}
+
+.logged-panel__user-icon {
+	width: 21px;
+	height: 21px;
+	min-width: 21px;
+	margin-right: 10px;
+}
+
+.logged-panel__username {
+	margin-right: 12px;
+	width: 83px;
+	min-height: 36px;
+	max-width: 83px;
+	font-size: 12px;
+	line-height: 1.1;
+	color: #FFFF;
+	transition: color .3s ease-in-out;
+}
+
+.logged-panel__user-info:hover .logged-panel__username {
+	color: #FF9900;
+	transition: color .3s ease-in-out;
+}
+
+.logged-panel__exit-button {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.1;
+	color: #5D91BB;
+	padding: 0 20px;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	transition: color .3s ease-in-out;
+}
+
+.logged-panel__exit-button:hover {
+	color: #FF9900;
+	transition: color .3s ease-in-out;
+}
+
 @media (max-width: 1024px) {
+	.login-button {
+		margin-left: 0;
+	}
+
 	.mob-menu-btn {
 		display: block;
 	}

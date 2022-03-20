@@ -1,0 +1,319 @@
+input[type="checkbox"], input[type="radio"] {
+    -webkit-appearance: checkbox;
+}
+
+.section--registration {
+    max-width: 1340px;
+    width: 100%;
+    background: #20415B url("../img/system/registration-page_bg.jpg") no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.reg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 828px;
+}
+
+.reg__wrapper {
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.reg__wrapper::after {
+    content: " ";
+    position: absolute;
+    top: calc((100% - 227px) / 2);
+    right: -108px;
+    z-index: -1;
+    width: 227px;
+    height: 227px;
+    background: url(../img/system/logos/DIP-circle.svg) no-repeat center center;
+    background-size: 227px;
+    -webkit-animation: spin 40s linear 0s infinite;
+    animation: spin 40s linear 0s infinite;
+}
+
+@media (max-width: 1024px) {
+    .reg__wrapper::after {
+        display: none;
+    }
+}
+
+/*TABS*/
+
+.tab-wrapper{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.44);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.44);
+    height: 100%;
+    width: 100%;
+    padding: 80px;
+}
+
+.tabs {
+    margin-bottom: 35px;
+}
+
+.tab {
+    cursor: pointer;
+    color: #868686;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.tab:first-child {
+    margin-right: 20px;
+}
+
+.panels{
+    width:100%;
+}
+
+.reg-form {
+    display: none;
+    -webkit-animation: fadein .8s;
+    animation: fadein .8s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.radio {
+    display:none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel{
+    display:block
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab{
+    font-weight: 700;
+    color:#333;
+    border-bottom: 2px solid #FF9900;
+}
+
+@media (max-width: 1024px) {
+    .tab-wrapper{
+        padding: 50px 30px;
+    }
+}
+
+/*////*/
+
+.reg-form__input {
+    margin-bottom: 35px;
+}
+
+.reg-form__input--last {
+    margin-bottom: 12px;
+}
+
+.reg-form__input label {
+    color: #868686;
+    padding-bottom: 10px;
+}
+
+.reg-form__input input {
+    height: 40px;
+}
+
+.reg-form__input input:invalid {
+    color: red;
+}
+
+.reg-form__forgot-pass {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.1;
+    color: #2F6088;
+    cursor: pointer;
+}
+
+.reg-form__forgot-pass:hover {
+    opacity: .8;
+}
+
+.reg-form__type-face {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.reg-form__checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.reg-form__checkbox input {
+    border: none;
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.reg-form__checkbox--confirm {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+.reg-form__checkbox--confirm a {
+    color: #2F6088;
+}
+
+.reg-form__checkbox--confirm a:hover {
+    opacity: .8;
+}
+
+.reg-form__checkbox--face {
+    font-size: 16px;
+    line-height: 1.1;
+    margin-bottom: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.reg-form__button {
+    padding: 0 20px;
+}
+
+.show-password {
+    position: absolute;
+    right: 20px;
+    top: calc((100% - 18px) / 2);
+    width: 21px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.show-password img {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .reg-form__type-face {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .reg-form__checkbox--face {
+        margin-bottom: 20px;
+    }
+
+    .reg-form__checkbox--face:last-child {
+        margin-bottom: 10px;
+    }
+
+}
+
+/* Forgot password Modal */
+.modal-bg {
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .5);
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.modal {
+    max-width: 500px;
+    width: 100%;
+    padding: 50px;
+    background-color: #fff;
+    cursor: auto;
+}
+
+.modal-bg--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.recover-pass__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.recover-pass__desc {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.recover-pass__alert {
+    padding: 15px;
+    margin-bottom: 30px;
+    color: rgb(34, 128, 7);
+    background-color: rgb(226, 247, 220);
+}
+
+.recover-pass__button {
+    padding: 0 15px;
+}

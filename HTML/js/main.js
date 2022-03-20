@@ -48,3 +48,37 @@ $(document).ready(function(){
 $(".news li").on('click', function(e){
     $(this).attr("id","active-tab");
 })
+
+// Для страницы Регистрации/Вход - показать/скрыть пароль
+$( document ).ready(function() {
+    // For login password input
+    $('#login-show-pass').click(function(){
+        var type = $('#login-password').attr('type') == "text" ? "password" : 'text',
+            c = $(this).html() == "<img src=\"/img/system/eye-password-show.svg\" alt=\"show password\">" ? "<img" +
+                " src=\"/img/system/eye-password.svg\" alt=\"show password\">" : "<img src=\"/img/system/eye-password-show.svg\" alt=\"show password\">";
+        $(this).html(c);
+        $('#login-password').prop('type', type);
+    });
+
+    // For registration password input
+    $('#reg-show-pass').click(function(){
+        var type = $('#reg-password').attr('type') == "text" ? "password" : 'text',
+            c = $(this).html() == "<img src=\"/img/system/eye-password-show.svg\" alt=\"show password\">" ? "<img" +
+                " src=\"/img/system/eye-password.svg\" alt=\"show password\">" : "<img src=\"/img/system/eye-password-show.svg\" alt=\"show password\">";
+        $(this).html(c);
+        $('#reg-password').prop('type', type);
+    });
+});
+
+// Модальное окно Востановление пароля
+$('.open-btn').on('click', function(event){
+    $('.modal-bg').addClass('modal-bg--active');
+});
+
+$('.modal-bg, .modal__close').on('click', function(event){
+    $('.modal-bg').removeClass('modal-bg--active');
+});
+
+$('.modal').on('click', function(event){
+    event.stopPropagation();
+});
